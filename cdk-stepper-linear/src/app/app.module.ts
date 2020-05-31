@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CdkStepperModule } from '@angular/cdk/stepper';
+import { MatCheckboxModule} from "@angular/material/checkbox";
 import {
   CdkLinearStepper,
   CustomLinearStepper
@@ -10,10 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CommonModule} from "@angular/common";
+import {ReactiveFormsModule} from "@angular/forms";
 
 export {
   CdkLinearStepper,
-  CustomLinearStepper
+  CustomLinearStepper,
+  MatCheckboxModule
 };
 
 const EXAMPLES = [
@@ -31,7 +34,9 @@ const EXAMPLES = [
     AppRoutingModule,
     BrowserAnimationsModule,
     CdkStepperModule,
-    CommonModule
+    CommonModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   exports: EXAMPLES,
   entryComponents: EXAMPLES,
