@@ -17,7 +17,9 @@
     providers: [{ provide: CdkStepper, useExisting: CustomLinearStepper}]
   })
   export class CustomLinearStepper extends CdkStepper {
-
+    onClick(index: number): void {
+      this.selectedIndex = index;
+    }
   }
 
 
